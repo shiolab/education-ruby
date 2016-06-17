@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>5.条件分岐</title>
+
+</head>
+<body>
+<h2>5.条件分岐</h2>
+
+<hr />
+
+<p>「もしこの条件に一致するならこの処理を行う」という処理を「条件分岐」といいます。</p>
+
+<h3>5-1. if文</h3>
+
+<p><code>if</code> 文を入力してみましょう。</p>
+
+<pre><code>fruit = "りんご"
+__ fruit __ "りんご"
+  puts "これはりんごです"
+___
+</code></pre>
+
+<p>🕵 条件分岐の基本的な構文は以下です。条件式が <code>true</code> の場合は、<code>end</code> までの処理内容が実行されます。</p>
+
+<pre><code>if 条件式
+  処理内容
+end
+</code></pre>
+
+<p>🕵 <code>if</code> 文で「等しい」という条件式を書く場合は、<code>==</code> を使用します。</p>
+
+<p><br /></p>
+
+<h3>5-2. if文 (2)</h3>
+
+<p><code>if</code> 文で、否定の条件式を入力してみましょう。</p>
+
+<pre><code>fruit = "みかん"
+__ fruit __ "りんご"
+  puts "これはりんごではありません"
+___
+</code></pre>
+
+<p>🕵 <code>if</code> 文で「等しくない」という条件式を書く場合は、<code>!=</code> を使用します。</p>
+
+<p><br /></p>
+
+<h3>5-3. else文</h3>
+
+<p><code>else</code> 文を入力してみましょう。</p>
+
+<pre><code>fruit = "りんご"
+__ fruit __ "りんご"
+  puts "これはりんごです"
+___
+  puts "これはりんごではありません"
+___
+</code></pre>
+
+<p>🕵 条件式に当てはまるものがなかった場合、<code>else</code> から <code>end</code>までの処理が実行されます。</p>
+
+<p><br /></p>
+
+<h3>5-4. elsif文</h3>
+
+<p><code>elsif</code> 文を入力してみましょう。</p>
+
+<pre><code>ondo = 25
+__ ondo &lt; 20
+  puts "寒い"
+_____ 20 &lt;= ondo &amp;&amp; ondo &lt; 30
+  puts "暑い"
+else
+  puts "とても暑い"
+___
+</code></pre>
+
+<p>🕵 「この条件に一致する場合」という処理は、<code>elsif</code>を使うと複数設定する事ができます。</p>
+
+<p>🕵 <code>elsif</code>文は、<code>if</code> 文と <code>else</code> 文との間に挟む形で使用します。<code>else</code>文は、<code>if</code>における条件式、および、<code>elsif</code>における条件式すべてに当てはまらない場合に実行されます。</p>
+
+<pre><code>if 条件式1
+  条件式1がtrueの場合の処理内容
+elsif 条件式2
+  条件式2がtrueの場合の処理内容
+else
+  条件式1,2に当てはまらない場合の処理内容
+end
+</code></pre>
+
+<p><br /></p>
+
+<h3>5-5. unless文</h3>
+
+<p>否定の条件式を完成させましょう。</p>
+
+<pre><code>fruit = "みかん"
+______ fruit __ "りんご"
+  puts "これはりんごではありません"
+___
+</code></pre>
+
+<p>🕵 「条件式が正しくない場合」は、<code>unless</code>文 を使用することもできます。</p>
+
+<p>🕵 <code>unless</code>文は、<code>if</code> 文で <code>!=</code> を使用するのと同じです。</p>
+
+<p><br /></p>
+
+<h3>5-6. case文 (1)</h3>
+
+<p><code>case</code> 文を完成させましょう。</p>
+
+<pre><code>point = 5
+____ point
+  ____ 5
+    puts "5ポイント"  
+  ____ 10
+    puts "10ポイント"
+___
+</code></pre>
+
+<p>🕵 「ある変数の値が○○○の場合」のような条件分岐が続く場合は、<code>case</code> 文を使用すると簡潔になります。</p>
+
+<p>🕵 基本的な <code>case</code> 文の書き方は以下です。</p>
+
+<pre><code>sample = 1
+case sample
+  when 1
+    処理1
+  when 2
+    処理2
+  when 3
+    処理3
+end
+</code></pre>
+
+<p><br /></p>
+
+<h3>5-7. case文 (2)</h3>
+
+<p>空欄を埋めてcase文を完成させましょう。</p>
+
+<pre><code>point = 5
+____ point
+  ____ 1,2,3
+    puts "1〜3ポイントの間"  
+  ____ 4,5,6
+    puts "4〜6ポイントの間"
+___
+</code></pre>
+
+<p>🕵 <code>case</code> 文では一つの <code>when</code> に対して、カンマ区切りにすることで複数の値を指定できます。</p>
+
+<p><br /></p>
+
+<h3>5-8. case文 (3)</h3>
+
+<p>空欄を埋めてcase文を完成させましょう。</p>
+
+<pre><code>point = 5
+____ point
+  ____ 1..10
+    puts "1〜10ポイントの間"  
+  ____ 11..20
+    puts "11〜20ポイントの間"
+___
+</code></pre>
+
+<p>🕵 <code>case</code> 文では一つの <code>when</code> に対して複数の値が指定できますが、「1から10まで」のように、範囲を指定することもできます。</p>
+
+<p><br /></p>
+
+<h3>5-9. case文 (4)</h3>
+
+<p><code>case</code> 文に対して <code>else</code> 文を追加してみましょう。</p>
+
+<pre><code>point = 25
+____ point
+  when 1..10
+    puts "1〜10ポイントの間"  
+  when 11..20
+    puts "11〜20ポイントの間"
+  ____
+    puts "1〜20ポイントの範囲外"
+___
+</code></pre>
+
+<p>🕵 <code>case</code> 文において、<code>when</code> で指定されたどの値にも当てはまらない場合の処理はに、<code>else</code> 文を使用します。</p>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>4. 変数と定数</title>
+
+</head>
+<body>
+<h2>4. 変数と定数</h2>
+
+<hr />
+
+<p>文字列や数値を入れておく「変数」と「定数」について学びましょう。</p>
+
+<p><br /></p>
+
+<h3>4-1. 「変数」に値を指定し、表示する</h3>
+
+<p>変数 <code>message</code> を定義し、「Hello World」というテキストを入れ、さらに入れた値を表示してみましょう。</p>
+
+<pre><code>_______ = "___________"
+puts _______
+</code></pre>
+
+<p>🕵 変数になんらかの値を代入する場合はイコール <code>=</code> を使い、<code>sample = 10</code> のように記述します。</p>
+
+<p>🕵 数学でのイコール記号は「等しい」を意味しますが、Rubyにおいては代入を意味するので注意して下さい。Rubyにおいて「等しい」は <code>==</code> を使用します。</p>
+
+<p><br /></p>
+
+<h3>4-2. 変数と文字列の連結</h3>
+
+<p>変数 <code>message</code> と 文字列 "World"を連結したものを表示してみましょう。</p>
+
+<pre><code>_______ = "Hello World"
+puts _______ _ "_____"
+</code></pre>
+
+<p>🕵 文字列と変数を連結する場合も、プラス <code>+</code> 記号を使用します。</p>
+
+<p><br /></p>
+
+<h3>4-3. 「定数」に値を指定し、表示する</h3>
+
+<p>定数 <code>PI</code> を定義し、「3.14」という値を入れ、さらに入れた値を表示してみましょう。</p>
+
+<pre><code>__ = ____
+puts __
+</code></pre>
+
+<p>🕵 変数に入れられた値は、計算などで中身が変わったりします。しかし、一度定義してしまえばそれ以降変わることのないような値には「定数」を使用します。例えば、円周率などが挙げられます。</p>
+
+<p><br /></p>
+
+<h3>4-4. 定数と文字列の連結</h3>
+
+<p>文字列「PI」と定数 <code>PI</code> を連結したものを表示してみましょう。</p>
+
+<pre><code>__ = 3.14
+puts "__" _ __.to_s
+</code></pre>
+
+<p>🕵 文字列と定数を連結する場合も、プラス <code>+</code> 記号を使用します。</p>
+
+<p>🕵 数値と文字列を連結する場合は、数値を文字列に変換する必要があるので、数値の後に <code>.to_s</code> をつけます。</p>
+
+<p><br /></p>
+
+<h3>4-5. 変数内での足し算</h3>
+
+<p>変数 <code>calc</code> を定義して、<code>10 + 5</code> を代入した結果を表示しましょう。</p>
+
+<pre><code>____ = ______
+puts ____
+</code></pre>
+
+<p><br /></p>
+
+<h3>4-6. 変数の値にさらに足し算を行う</h3>
+
+<p>変数 <code>calc</code> の値に、さらに10を足した値を代入してみましょう。</p>
+
+<pre><code>calc = 10 + 5
+____ = ____ _ __
+puts ____
+</code></pre>
+
+<p><br /></p>
+
+<h3>4-7. よりシンプルな足し算</h3>
+
+<p>記号2文字を使用して、変数 <code>calc</code> の値に、さらに5を足した値を代入してみましょう。</p>
+
+<pre><code>calc = 10 + 5
+____ __ __
+puts ____
+</code></pre>
+
+<p>🕵 <code>sample += 15</code> は、<code>sample = sample + 15</code> と同じ意味になります。</p>
+
+<p><br /></p>
+
+<h3>4-8. 引き算</h3>
+
+<p>記号2文字を使用して、変数 <code>calc</code> の値に、さらに9を引いた値を代入してみましょう。</p>
+
+<pre><code>calc = 10 + 5
+____ __ _
+puts ____
+</code></pre>
+
+<p>🕵 <code>sample -= 15</code> は、<code>sample = sample - 15</code> と同じ意味になります。</p>
+
+<p><br /></p>
+
+<h3>4-9. 掛け算</h3>
+
+<p>記号2文字を使用して、変数 <code>calc</code> の値に、さらに3を掛けた値を代入してみましょう。</p>
+
+<pre><code>calc = 10 + 5
+____ __ _
+puts ____
+</code></pre>
+
+<p>🕵 <code>sample *= 15</code> は、<code>sample = sample * 15</code> と同じ意味になります。</p>
+
+<p><br /></p>
+
+<h3>4-10. 割り算</h3>
+
+<p>記号2文字を使用して、変数 <code>calc</code> の値に、さらに2で割った値を代入してみましょう。</p>
+
+<pre><code>calc = 10 + 5
+____ __ _
+puts ____
+</code></pre>
+
+<p>🕵 <code>sample /= 15</code> は、<code>sample = sample / 15</code> と同じ意味になります。</p>
+</body>
+</html>

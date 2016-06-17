@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>7.配列</title>
+
+</head>
+<body>
+<h2>7.配列</h2>
+
+<hr />
+
+<p>「配列」と「ハッシュ」について学びましょう。</p>
+
+<h3>7-1. 「配列」を扱う</h3>
+
+<p>変数 <code>elems</code> を定義し、「"Ruby","Python","Perl"」という文字列が順に入った配列を宣言してみましょう。</p>
+
+<pre><code>elems = _ "Ruby", "Python, "Perl" _
+</code></pre>
+
+<p>💁 配列とは、複数の別々な数値や文字列を一つの変数に入れることができる「棚」のようなものです。</p>
+
+<p>🕵 配列を使用するには、まとめる要素を <code>[</code> と<code>]</code> で囲み、各要素をカンマ <code>,</code> で区切ります。</p>
+
+<p><br /></p>
+
+<h3>7-2. 配列に格納した値を使用する</h3>
+
+<p>配列 <code>elems</code> の中の「Perl」という値を表示してみましょう。</p>
+
+<pre><code>elems = [ "Ruby", "Python", "Perl" ]
+puts elems[ _ ]
+</code></pre>
+
+<p>🕵 上記の <code>elems</code> という配列から「Ruby」という値を取り出したい場合は、<code>elems[0]</code> と記述します。「Python」という値を取り出したい場合は、<code>elems[1]</code> と記述します。</p>
+
+<p>🕵 値に振られる番号は 0 から始まります。</p>
+
+<p><br /></p>
+
+<h3>7-3. 配列の要素の個数を数える</h3>
+
+<p>配列 <code>foods</code> の中に入っている要素の個数を出力してみましょう。</p>
+
+<pre><code>foods = [ "rice", "bread", "soup", "milk" ]
+puts foods.______
+</code></pre>
+
+<p>🕵 配列の中の値の個数を調べたい場合は <code>length</code> メソッドを使用します。<code>length</code> は配列の中に入っている要素の個数を数えて、その結果を数値として返します。</p>
+
+<p><br /></p>
+
+<h3>7-4. ループを使って配列の値を取り出す</h3>
+
+<p>繰り返し構文 <code>for</code> を用いて、配列 <code>foods</code> の中の全ての値を表示するプログラムを完成させましょう。</p>
+
+<pre><code>foods = [ "rice", "bread", "soup", "milk" ]
+___ val __ foods
+  puts val
+___
+</code></pre>
+
+<p>🕵 <code>for</code> ... <code>in</code> 文を使用することで、配列の繰り返し処理を実行することができます。<code>for</code> 文は、<code>foods</code> 配列内の要素を順番に取り出し、<code>val</code> という変数に保存します。</p>
+
+<p><br /></p>
+
+<h3>7-5. 「ハッシュ」を扱う</h3>
+
+<p>ハッシュを完成させよう。</p>
+
+<pre><code>foods = _ name: "チョコレート", type: "お菓子" _
+</code></pre>
+
+<p>💁 配列では、<code>elems[0]</code>, <code>elems[1]</code> のように、番号で値を指定しました。しかし、配列の中にたくさんのデータが入っていた場合、それぞれのデータの番号の中に入っている値をすべて覚えることはできません。</p>
+
+<p>そこで、「ハッシュ」が登場します。ハッシュでは、それぞれの「引き出し」に番号の代わりに名前をつけることができます。この名前を「キー」といいます。</p>
+
+<p>🕵 ハッシュは、複数の要素をまとめるための仕組みです。ハッシュを使用するには、まとめる要素を <code>{</code> と<code>}</code> で囲みます。</p>
+
+<p><br /></p>
+
+<h3>7-6. ハッシュから値を取り出す</h3>
+
+<p>ハッシュから 「お菓子」という文字列を取り出してみましょう。</p>
+
+<pre><code>foods = { name: "チョコレート", type: "お菓子" }
+puts foods[____]
+</code></pre>
+
+<p>🕵 ハッシュ <code>foods</code> から「チョコレート」を取り出したい場合は、<code>foods[:name]</code> と記述します。<code>name</code>の前にコロン <code>:</code> を付ける点に注意しましょう。</p>
+
+<p><br /></p>
+
+<h3>7-7. ループを使ってハッシュの値を取り出す</h3>
+
+<p>繰り返し構文 <code>each</code> を用いて、ハッシュ <code>foods</code> の中の全ての値のキーと値を表示するプログラムを完成させましょう。</p>
+
+<pre><code>foods = { name: "チョコレート", type: "お菓子" }
+foods.____ __ |key,val|
+  puts key
+  puts val
+end
+</code></pre>
+
+<p>🕵 <code>each do</code> を使用することで、ハッシュの繰り返し処理を実行することができます。</p>
+
+<p>🕵 <code>key</code> , <code>val</code> はそれぞれ「キー」と「値」を表します。これらの変数名は任意のものに変えることができます。</p>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>8. メソッド</title>
+
+</head>
+<body>
+<h2>8. メソッド</h2>
+
+<hr />
+
+<p>複数行にわたる処理をまとめをプログラム中で何度も書くことがあるような場合は「メソッド」にまとめると便利です。一度処理を記述してしまえば プログラム中でその処理を好きなタイミングで簡単に呼び出すことができるようになります。</p>
+
+<h3>8-1. メソッドの定義 (1)</h3>
+
+<p>メソッド <code>hello</code> を定義してみましょう。</p>
+
+<pre><code>___ hello
+
+___
+</code></pre>
+
+<p>🕵 メソッドは <code>def</code> ... <code>end</code> を使って定義します。</p>
+
+<p><br /></p>
+
+<h3>8-2. メソッドの定義 (2)</h3>
+
+<p><code>hello</code> メソッドが実行されたら、"Hello"と表示されるようにしてみましょう。</p>
+
+<pre><code>def hello
+  ____ "Hello"
+end
+</code></pre>
+
+<p>🕵 実行する処理は <code>def</code> ... <code>end</code> の間に記述します。</p>
+
+<p><br /></p>
+
+<h3>8-3. メソッドの実行</h3>
+
+<p>定義した <code>hello</code> メソッドを実行してみよう。</p>
+
+<pre><code>def hello
+  puts "Hello"
+end
+_____
+</code></pre>
+
+<p>🕵 定義されたメソッドを使うには、メソッド名をそのまま記述します。</p>
+
+<p><br /></p>
+
+<h3>8-4. メソッドが値を返すようにする</h3>
+
+<p>変数 <code>returnval</code> に <code>hello</code> メソッドから返された値を代入し、それを表示するようにしてみましょう。</p>
+
+<pre><code>def hello
+  puts "Executed"
+  return "Hi"
+  puts "Not Executed"
+end
+
+returnval = _____
+puts returnval
+</code></pre>
+
+<p>🕵 定義されたメソッドは <code>return</code> という表現を使用することで、値を返すことが可能です。こうして返された値は「戻り値」と呼ばれ、変数に代入することできます。</p>
+
+<p>🕵 <code>return</code> 文を使用すると、<code>return</code> より後の行の処理は無視されます。</p>
+
+<p><br /></p>
+
+<h3>8-5. メソッドに値を渡す(1)</h3>
+
+<p><code>x</code>, <code>y</code> という2つの引数を持つ <code>calc</code> という名前のメソッドを定義してみましょう。</p>
+
+<pre><code>___ ____(_ , _)
+
+___
+</code></pre>
+
+<p>🕵 メソッドに何らかの値を渡して、それを使った処理をしたいという場合があります。このような場合、メソッドに値を渡すことが可能です。これを「引数」といいます。引数はメソッド名のあとに　<code>(</code> <code>)</code> で囲って指定します。</p>
+
+<p><br /></p>
+
+<h3>8-6. メソッドに値を渡す(2)</h3>
+
+<p><code>calc</code> メソッドが <code>x + y * 9</code> という計算結果を戻り値として返すようにしてみましょう。</p>
+
+<pre><code>def calc(x, y)
+  ______ _ _ _ _ _
+end
+</code></pre>
+
+<p>🕵 実際に渡された値は、メソッド内で使用することができます。</p>
+
+<p><br /></p>
+
+<h3>8-7. メソッドに値を渡す(3)</h3>
+
+<p>変数 <code>calc_result</code> を定義し、引数として <code>7</code> と <code>3</code> を <code>calc</code> メソッドに渡してみましょう。</p>
+
+<pre><code>def calc(x,y)
+  return x + y * 9
+end
+
+calc_result = ____(_, _)
+puts calc_result
+</code></pre>
+
+<p>🕵  <code>calc</code> メソッドに実際の値を引数として渡します。</p>
+</body>
+</html>

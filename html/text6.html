@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>6.繰り返し</title>
+
+</head>
+<body>
+<h2>6.繰り返し</h2>
+
+<hr />
+
+<p>同じ処理を複数回繰り返したい場合の処理を「繰り返し」といいます。</p>
+
+<h3>6-1. while文でループさせる</h3>
+
+<p><code>while</code> 文による処理を完成させましょう。</p>
+
+<pre><code>i = 0
+_____ i &lt; 10 do
+  puts i
+  i += 1
+___
+</code></pre>
+
+<p>🕵 <code>while</code> 文による繰り返しを利用して0〜9までの値を表示する処理です。</p>
+
+<p>🕵 この <code>while</code> 文は、「iが10未満で<strong>ある限り</strong>処理を続ける」という意味で、条件式が <code>true</code> である限り、処理を実行し続けます。</p>
+
+<p><br /></p>
+
+<h3>6-2. until文でループさせる</h3>
+
+<p><code>until</code> 文による処理を完成させましょう。</p>
+
+<pre><code>i = 0
+_____ i &gt;= 10 do
+  puts i
+  i += 1
+___
+</code></pre>
+
+<p>🕵 <code>until</code> 文による繰り返しを利用して0〜9までの値を表示する処理です。</p>
+
+<p>🕵 この <code>until</code> 文は「iが10以上で<strong>ない限り</strong>処理を続ける」という意味で、条件式が <code>false</code> である限り、処理を実行し続けます。</p>
+
+<p><br /></p>
+
+<h3>6-3. for文でループさせる</h3>
+
+<p><code>for</code> 文による処理を完成させましょう。</p>
+
+<pre><code>___ i in 0..9 do
+  puts i
+___
+</code></pre>
+
+<p>🕵 <code>for</code> 文による繰り返しを利用して0〜9までの値を表示する処理です。<code>for</code> 文では一般に、以前学んだ「範囲」を使用します。</p>
+
+<p>🕵 <code>for</code> 文は、 <code>while</code> 文や <code>until</code> 文と異なり、繰り返しが一回行われると、<code>i</code>の値が1ずつ自動で追加されます。</p>
+
+<p><br /></p>
+
+<h3>6-4. times によるループ</h3>
+
+<p><code>times</code> メソッドによる処理を完成させましょう。</p>
+
+<pre><code>5._____ do
+  puts "Hello"
+___
+</code></pre>
+
+<p>🕵 <code>times</code> メソッドによる繰り返しを利用して、5回「Hello」を表示します。</p>
+
+<p>🕵 <code>times</code> メソッドを使用すると、指定された回数だけ処理内容を繰り返します。</p>
+
+<p><br /></p>
+
+<h3>6-5. breakによる処理の中断</h3>
+
+<p><code>break</code> 文を使用すると処理を止めることができます。</p>
+
+<pre><code>10.times do |i|
+  if i == 5
+    _____
+    puts i
+  else
+    puts i
+  end
+end
+</code></pre>
+
+<p>🕵 繰り返し文の中で <code>break</code> 文が実行された場合、その繰り返し文は途中で終了します。</p>
+
+<p><br /></p>
+
+<h3>6-6. nextによる処理のスキップ</h3>
+
+<p><code>next</code> 文を使用すると途中の処理をスキップすることができます。</p>
+
+<pre><code>10.times do |i|
+  if i == 5
+    ____
+    puts i
+  else
+    puts i
+  end
+end
+</code></pre>
+
+<p>🕵 繰り返し文の中で <code>next</code> 文が実行された場合、実行中の繰り返しがスキップされ、次の繰り返しに処理が移ります。</p>
+</body>
+</html>

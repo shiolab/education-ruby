@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>2.型</title>
+
+</head>
+<body>
+<h2>2.型</h2>
+
+<hr />
+
+<p>データ形式のことを型といいます。ここでは「文字列」「数値」「配列」「論理値」「ハッシュ」について基本を学びましょう。</p>
+
+<h3>2-1.文字列</h3>
+
+<p>「Hello」という文字列を表示してみましょう。</p>
+
+<pre><code>puts _______
+</code></pre>
+
+<p>🕵 文字列は、ダブルクォーテーション <code>"</code> で囲みます。</p>
+
+<p><br /></p>
+
+<h3>2-2. 整数</h3>
+
+<p>100 という整数を表示してみましょう。</p>
+
+<pre><code>puts ___
+</code></pre>
+
+<p>🕵 整数はダブルクォーテーション <code>"</code> で囲む必要がありません。</p>
+
+<p><br /></p>
+
+<h3>2-3. 小数</h3>
+
+<p>5.5 という小数を表示してみましょう。</p>
+
+<pre><code>puts ___
+</code></pre>
+
+<p>🕵 小数もダブルクォーテーション <code>"</code> で囲む必要がありません。</p>
+
+<p><br /></p>
+
+<h3>2-4. 配列</h3>
+
+<p>配列を完成させましょう。</p>
+
+<pre><code>array = _ 1,10,100 _
+puts array
+</code></pre>
+
+<p>🕵 配列は、複数の要素をまとめるための仕組みです。配列を使用するには、まとめる要素を <code>[</code> と<code>]</code> で囲み、各要素をカンマ <code>,</code> で区切ります。</p>
+
+<p><br /></p>
+
+<h3>2-5. 論理値 (1)</h3>
+
+<p><code>true</code> という論理値を表示してみましょう。</p>
+
+<pre><code>puts ____
+</code></pre>
+
+<p>🕵 ある条件が<strong>成り立つ</strong>場合には <code>true</code>（真）という論理値を使用します。</p>
+
+<p><br /></p>
+
+<h3>2-6. 論理値 (2)</h3>
+
+<p><code>false</code> という論理値を表示してみましょう。</p>
+
+<pre><code>puts _____
+</code></pre>
+
+<p>🕵 条件が<strong>成り立たない</strong>場合には <code>false</code>（偽）という論理値を使用します。</p>
+
+<p><br /></p>
+
+<h3>2-7. 論理値 (3)</h3>
+
+<p><code>nil</code> という論理値を表示してみましょう。</p>
+
+<pre><code>puts ___
+</code></pre>
+
+<p>🕵 「値がない」という場合には <code>nil</code> という論理値を使います。</p>
+
+<p><br /></p>
+
+<h3>2-8. ハッシュ</h3>
+
+<p>ハッシュを完成させましょう。</p>
+
+<pre><code>hash = _ apple: "りんご", book: "本" _
+puts hash
+</code></pre>
+
+<p>🕵 ハッシュは、複数の要素をまとめるための仕組みです。ハッシュを使用するには、まとめる要素を <code>{</code> と<code>}</code> で囲みます。</p>
+
+<p><br /></p>
+
+<h3>2-9. 範囲</h3>
+
+<p>1以上10以下の「範囲」を作成してみましょう。</p>
+
+<pre><code>puts [* _____ ]
+</code></pre>
+
+<p>🕵 範囲は、同じ処理を値を変えながら繰り返す場合などに使用され、<code>3..15</code> のように表記します。</p>
+
+<p>🕵 範囲を表示するには、<code>[* 3..15 ]</code> のように記述します。</p>
+
+<p>💁 範囲には以下の2種類があります。</p>
+
+<ul>
+<li><p>1..5 (ドットが2つ) 1以上5以下</p></li>
+<li><p>1...5 (ドットが3つ) 1以上5未満</p></li>
+</ul>
+
+
+<p><br /></p>
+
+<h3>2-10. 「文字列」→「整数」 (1)</h3>
+
+<p>文字列「123abc」を整数にしてみましょう。</p>
+
+<pre><code>puts "123abc".____
+</code></pre>
+
+<p>🕵 文字列を整数にするには、<code>to_i</code> メソッドを使用します。</p>
+
+<p>🕵 <code>to_i</code> メソッドは、文字列の最初の数値のみを取得し、その後に続くアルファベットなどが無視されます。</p>
+
+<p><br /></p>
+
+<h3>2-11. 「文字列」→「整数」 (2)</h3>
+
+<p>文字列「abc123」を整数にしてみましょう。</p>
+
+<pre><code>puts "abc123".____
+</code></pre>
+
+<p>🕵 <code>to_i</code> メソッドは、文字列の最初が数値でない場合、0となります。</p>
+
+<p><br /></p>
+
+<h3>2-12. 文字列」→「小数」</h3>
+
+<p>文字列「123abc」を小数にしてみましょう。</p>
+
+<pre><code>puts "123abc".____
+</code></pre>
+
+<p>🕵 文字列を小数にするには、<code>to_f</code> メソッドを使用します。</p>
+
+<p><br /></p>
+
+<h3>2-13. 「整数」→「文字列」</h3>
+
+<p>数値「123」を文字列にしてみましょう。</p>
+
+<pre><code>puts "123".____
+</code></pre>
+
+<p>🕵 整数を文字列にするには、<code>to_s</code> メソッドを使用します。</p>
+</body>
+</html>

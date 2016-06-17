@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>9. 演習（英単語ゲームを作ろう）</title>
+
+</head>
+<body>
+<h2>9. 演習（英単語ゲームを作ろう）</h2>
+
+<hr />
+
+<p>まとめとして「英単語ゲーム」を作ってみましょう。</p>
+
+<p><br /></p>
+
+<h3>9-1. プログラムを作成するファイルを開きます</h3>
+
+<p>💁 デスクトップにある「Atom」をダブルクリックして、立ち上がったら、「main.rb」を開きます。</p>
+
+<p>💁 起動が遅いかもしれないので、のんびり待ちましょう。</p>
+
+<p>🕵 「Atom」はプログラムを作成するアプリケーションで、「エディタ」といいます。</p>
+
+<p><br /></p>
+
+<h3>9-2. プログラムを実行するターミナルを開きます</h3>
+
+<p>💁 デスクトップにある「LXTerminal」をダブルクリックして、立ち上がったら、次のコマンドを入力しましょう。入力が終わったら「Enter」キーを押してください。</p>
+
+<pre><code>ruby education/ruby/main.rb
+</code></pre>
+
+<p>🕵 この画面を「ターミナル」といいます。</p>
+
+<p>🕵 今日はこのコマンドを何回も入力します。「↑」キーを押すと過去に入力したコマンドを呼び出すことができます。</p>
+
+<p>💁 ターミナルに以下が表示されていることを確認してください。</p>
+
+<pre><code>英単語ゲームスタート！stopと入力したら中断します。
+</code></pre>
+
+<p><br /></p>
+
+<h3>9-3. 変数を準備します</h3>
+
+<p>💁 ここから本格的にプログラムをはじめます。</p>
+
+<p>💻 <code>words</code> というハッシュを作ります。ハッシュには、</p>
+
+<ul>
+<li>キー「apple」に対して「りんご」</li>
+<li>キー「dog」に対して「犬」</li>
+</ul>
+
+
+<p>を入れましょう。</p>
+
+<p><br /></p>
+
+<h3>9-4. 繰り返し処理を作ります</h3>
+
+<p>💁 定義した <code>words</code> に対する処理を作ります。</p>
+
+<p>💻 キーを変数 <code>key</code>、 値を変数 <code>value</code> として、ハッシュ <code>words</code> の <code>each</code> メソッドを作ってください。</p>
+
+<p>💻 繰り返しの中で、値の変数 <code>value</code> を使って「◯◯に対応する英単語を入力してください」と表示しましょう。</p>
+
+<p>🕵 <code>value</code> を使った表示は以下のように書きます。これを式展開といいます。</p>
+
+<pre><code>puts "#{value}に対応する英単語を入力してください。"
+</code></pre>
+
+<p><br /></p>
+
+<h3>9-5. 値を受け取ります</h3>
+
+<p>💁 キーボードから入力された値を受け取るようにします。</p>
+
+<p>💻 繰り返しの中で、変数 <code>answer</code> に <code>gets.chomp</code> で受け取った値を代入してください。</p>
+
+<p>🕵 キーボードからの入力は <code>gets</code> メソッドで受け取ります。 <code>chomp</code> メソッドは改行コードを除く処理をします。</p>
+
+<p><br /></p>
+
+<h3>9-6. 分岐処理を作ります</h3>
+
+<p>💁 入力された値による条件分岐をおこないます。</p>
+
+<p>💻 <code>answer</code> の値によって条件分岐してください。条件分岐には <code>if</code> ... <code>elsif</code> ... <code>else</code> ... <code>end</code> を使用してください。</p>
+
+<ul>
+<li><p><code>answer</code> が 「stop」と等しい時は、繰り返しを抜けるようにしてください。</p></li>
+<li><p><code>answer</code> が <code>key.to_s</code> と等しい時は、「正解です」を表示してください。</p></li>
+<li><p>それ以外は、「不正解です」を表示してください。</p></li>
+</ul>
+
+
+<p>🕵 繰り返しを抜けるのは <code>break</code> です。</p>
+
+<p>🕵 <code>answer</code> と比較する <code>key</code> は文字列での比較とするために <code>.to_s</code> メソッドを使って以下のように書きます。</p>
+
+<pre><code>  elsif answer == key.to_s
+</code></pre>
+
+<p><br /></p>
+
+<h3>9-7. 正解率を計算するための変数を準備します</h3>
+
+<p>💁 処理の最後に正解率を表示してみましょう。</p>
+
+<p>💻 <code>words</code>ハッシュの下に、質問数を入れる変数 <code>loop_count</code> と、正解数を入れる変数 <code>correct_count</code> を定義し、それぞれ 0 を代入してください。</p>
+
+<p>🕵 このように、最初に値を入れておく処理を「初期化」といいます。</p>
+
+<p><br /></p>
+
+<h3>9-8. 変数に値を入れます</h3>
+
+<p>💻 条件分岐の正解の場所で、<code>correct_count</code> に 1 を足します。</p>
+
+<p>💻 <code>words</code>ハッシュの繰り返し処理の最後の場所で、<code>loop_count</code> に 1 を足します。</p>
+
+<p>🕵 1 を足す方法はいくつかあります。</p>
+
+<p><br /></p>
+
+<h3>9-8. メソッドを定義します</h3>
+
+<p>💁 正解率の計算はメソッドにしましょう。</p>
+
+<p>💻 ファイルの一番下に <code>percentage</code> というメソッドを作ります。</p>
+
+<p>💻 メソッドには引数として <code>correct_count</code> <code>loop_count</code> を渡します。</p>
+
+<p>💻 正解率を計算し、結果を戻り値として戻しましょう。</p>
+
+<p><br /></p>
+
+<h3>9-9. メソッドを呼び出しましょう</h3>
+
+<p>💁 メソッドを呼び出し、正解率を表示しましょう。</p>
+
+<p>💻 <code>percentage</code> メソッドの戻り値を、変数 <code>p</code> に代入します。変数 <code>p</code> を使って、「あなたの正解率は◯◯パーセントです」と表示してください。</p>
+
+<p><br /></p>
+
+<h3>9-10. 完成したら</h3>
+
+<p>💁 ハッシュの中身を増やしたり、メッセージを変えたり、してみましょう。</p>
+</body>
+</html>
